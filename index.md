@@ -1,37 +1,49 @@
-## Welcome to GitHub Pages
+Μάθημα: Τεχνολογίες Λογισμικού
 
-You can use the [editor on GitHub](https://github.com/p13mark1/p13mark1.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+Τίτλος Εργασίας: Οπτικοποίηση δεδομένων χορηγιών (UK)
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Μαρκού Λοίζος
+ΑΜ: Π2015003
 
-### Markdown
+e-mail: p13mark1@ionio.gr
+Link προσωπικόυ αποθετήριου κώδικα: https://github.com/p13mark1/D3js-uk-political-donations/tree/2015003
+Link εκτελέσιμου κώδικα: https://p13mark1.github.io/D3js-uk-political-donations/
+Σύνοψη:
+Η παρούσα εργασίας αποτελεί τροποποίηση της εργασίας https://ioniodi.github.io/D3js-uk-political-donations/full-viz., στην οποία μέσω των HTML, CSS και Javascript γίνεται οπτικοποίηση δεδομένων. Έτσι, κάνοντας fork το αποθετήριο του ioniodi, το τροποποιούμε στο προσωπικό μας αποθετήριο, σύμφωνα με τις οδηγίες των παραδοτέων.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Παραδοτέο 1: Αρχικό έργο και ενδιάμεση αναφορά προόδου - 14 Μαρτίου (25%)
+Για το πρώτο παραδοτέο έγιναν οι εξής ενέργειες:
 
-```markdown
-Syntax highlighted code block
+Αρχικά, τροποποίησα το URL του προσωπικού μου αποθετηρίου από https://github.com/p13mark1/D3js-uk-political-donations/full-viz.html --> https://github.com/p13mark1/D3js-uk-political-donations, διαγράφοντας την κατάληξη full_viz.html και αλλάζοντας την ονομασία του αρχείου full_viz.html --> index.html.
 
-# Header 1
-## Header 2
-### Header 3
+![ScreenShot](1.jpg)
 
-- Bulleted
-- List
+Προσέθεσα των ήχο όταν κάνει κάποιος click στα κουμπιά, μέσω της συνάρτησης onmousedown() στη κεφαλίδα του(sound.currentTime=0;
+		sound.play(); και μια μεταβλητη var sound = new Audio("Sound.mp3");)
+.
+Χρησιμοποιώντας τα rgba και των HEX κώδικα, άλλαξα τα χρώματα από τις μπάλες.(https://www.w3schools.com/colors/colors_picker.asp)
 
-1. Numbered
-2. List
+![ScreenShot](2.jpg)
 
-**Bold** and _Italic_ and `Code` text
+Χρησιμοποιώντας τη συνάρτηση SpeechSynthesisUtterance(), εντός της συνάρτησης mouseover(), στον κώδικα του αρχείου chart.js, προσέθεσα την φωνή που θα ακούγεται για να λέει το όνομα και το ποσό του δωρήτη. Χρησιμοποιώντας το κομμάτι του κώδικα που προσέθεσα στο αρχείο index.html, κάνω zoom στα texts της ιστοσελίδας, τοποθετώντας το class=zoom εντός των κεφαλιδών των texts.
 
-[Link](url) and ![Image](src)
-```
+![ScreenShot](3.jpg)
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+Προσέθεσα μία ακόμη ομαδοποίηση δεδομένων.
 
-### Jekyll Themes
+![ScreenShot](4.jpg)
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/p13mark1/p13mark1.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+Εντός της συνάρτησης start() του αρχείου chart.js προσθέτοντας το .on("click", function(d) { window.open("http://www.google.com/search?q=" + d.donor);});, και δημιουργοντας μια μεταβλητη με το link(http://www.google.com/search?q=κάνοντας) κλικ πάνω σε κάποια μπάλα ο χρήστης θα κάνει αναζήτηση σε καινούργιο παράθυρο.
 
-### Support or Contact
+![ScreenShot](5.jpg)
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Τέλος, για το δεύτερο σκέλος σύμφωνα με τις οδηγίες έστειλα 5 φωτογραφίες από δωρητές.
+
+Παραδοτέο 2: Αρχικό έργο και ενδιάμεση αναφορά προόδου - 09 Μαιου (25%)
+Για το Δευτερο παραδοτέο έγιναν οι εξής ενέργειες:
+#### Εμφάνιση και επέκταση σειράς εικόνων δωρητών
+Προσθετουμε στο αρχειο Index ενα καινουργιο νέο &lt;div&gt; tag με σκοπο δημιουργιας μιασ περιοχης για να εμφανιζονται οι εικονες δωτητων.Μετα στο αρχειο style προσθετω τον κωδικα για να ορισω που ακριβως θα εμφανιστουν οι εικονες και τελος στο αρχειο chart στην συναρτηση mouseover πρωσθετο τον καταληλο κωδικα ωστοσο οταν το mouse περνα πανω απο καποιο δωρητη(κυκλο) να εμφανιζει την εικονα του στα pixels που εχω ορισει στο style.(αποφευγω την επαναληψη).
+
+Αποτελεσμα:
+
+![ScreenShot](6.jpg)
