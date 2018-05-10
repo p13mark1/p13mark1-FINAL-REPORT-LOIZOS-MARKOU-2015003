@@ -46,4 +46,4 @@ Link εκτελέσιμου κώδικα: https://p13mark1.github.io/D3js-uk-pol
 
 Αποτελεσμα:
 
-![ScreenShot](6.jpg)
+![ScreenShot](6.JPG)
